@@ -41,7 +41,7 @@ def load(path):
 
 
 # %%
-learning_rate = 1e-4  #first run @ 1e-3
+learning_rate = 1e-3  #first run @ 1e-3
 batch_size = 64
 image_every = 1
 save_every = 10
@@ -81,7 +81,7 @@ def train(model_number, new_epochs_number):
             if (epoch+old_epoch + 1) % save_every == 0:
                 os.makedirs(f"D:\\Github\\misc\\VAE\\models\\number_{model_number}", exist_ok=True)
                 save(epoch+old_epoch, vae, optimizer, rec_loss_list, kl_loss_list, f"D:\\Github\\misc\\VAE\\models\\number_{model_number}\\checkpoint_{epoch+old_epoch}.pth")
-            if (epoch+old_epoch + 1) % 8 == 0:
+            if (epoch+old_epoch + 1) % 5 == 0:
                 optimizer.param_groups[0]['lr'] /= 4
                 print("learning rate change")
             #print_gpu_memory()
