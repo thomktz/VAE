@@ -26,8 +26,9 @@ out += slider[i] + eigenvalues[i] + eigenvectorsInverse[i]
 
 A screenshot of the GUI, with sliders, `Reset` and `Random` buttons:
 
-![](https://github.com/thomktz/VAE/blob/main/sliders_reset.PNG)
-This is the `mean` face, i.e. average face. It is set as a zero for all sliders.
+![This is the `mean` face, i.e. average face. It is set as a zero for all sliders.](https://github.com/thomktz/VAE/blob/main/sliders_reset.PNG)
+
+
 
 
 A random generated face :
