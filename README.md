@@ -34,7 +34,9 @@ A random face :
 ![](https://github.com/thomktz/VAE/blob/main/sliders_random.PNG)
 
 
-And here's a few interesting sliders' effects (reminder: these were made and sorted by the PCA):
+
+
+And here are a few interesting sliders' effects (reminder: these were made and sorted by the PCA):
 
 `slider_0`, interpretation : Background color (the strongest eigenvalue)
 ![](https://github.com/thomktz/VAE/blob/main/sliders/slider_0.png)
