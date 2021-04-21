@@ -1,6 +1,7 @@
 # VAE
-Variable Autoencoder with PCA, a GUI and sliders to generate faces.\n
-Trained and created from scratch with Pytorch.
+Variable Autoencoder with PCA, a GUI and sliders to generate faces.
+
+Trained and created from scratch with Pytorch, sklearn, tkinter.
 
 ### Data
 
