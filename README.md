@@ -47,6 +47,14 @@ And here's a few interesting sliders' effects (reminder: these were made and sor
 `slider_3`, interpretation : Hair color
 ![](https://github.com/thomktz/VAE/blob/main/sliders/slider_3.png)
 
+`slider_4` and `slider_5` : interpretation : Sex + light provenance
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_4.png)
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_5.png)
+
+`slider_15` and `slider_19`, interpretation : Smile + chin size
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_16.png)
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_19.png)
+
 Other sliders have effects on sex, skin color, smile, face width, and a lot of sliders only affect the background
 
 
