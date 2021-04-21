@@ -54,7 +54,7 @@ And here are a few interesting sliders' effects (reminder: these were made and s
 ![](https://github.com/thomktz/VAE/blob/main/sliders/slider_4.png)
 ![](https://github.com/thomktz/VAE/blob/main/sliders/slider_5.png)
 
-`slider_15` and `slider_19`, interpretation : Smile + chin size
+`slider_15` and `slider_19`, interpretation : Smile + chin size/face tilt
 ![](https://github.com/thomktz/VAE/blob/main/sliders/slider_16.png)
 ![](https://github.com/thomktz/VAE/blob/main/sliders/slider_19.png)
 
