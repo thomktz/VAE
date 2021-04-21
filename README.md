@@ -24,9 +24,31 @@ out += slider[i] + eigenvalues[i] + eigenvectorsInverse[i]
 ### Results
 
 A screenshot of the GUI, with sliders, `Reset` and `Random` buttons:
+
 ![](https://github.com/thomktz/VAE/blob/main/sliders_reset.PNG)
 
+
 A random face :
+
 ![](https://github.com/thomktz/VAE/blob/main/sliders_random.PNG)
 
-And here's a few interesting sliders' effects :
+
+And here's a few interesting sliders' effects (reminder: these were made and sorted by the PCA):
+
+`slider_0`, interpretation : Background color (the strongest eigenvalue)
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_0.png)
+
+`slider_1`, interpretation : Face orientation
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_1.png)
+
+`slider_2`, interpretation : Light provenance
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_2.png)
+
+`slider_3`, interpretation : Hair color
+![](https://github.com/thomktz/VAE/blob/main/sliders/slider_3.png)
+
+Other sliders have effects on sex, skin color, smile, face width, and a lot of sliders only affect the background
+
+
+
+
