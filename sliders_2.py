@@ -40,13 +40,13 @@ def calculate_image(settings):
     real_settings = mean.copy()
     for i in range(nb_sliders):
         real_settings += settings[i] * eigenvalues[i] * eigenvectors[i]
-        real_settings = real_settings.reshape((1, latent_space))
+    real_settings = real_settings.reshape((1, latent_space))
 
-        reconstructed_image = vae.decode(torch.Tensor(real_settings).to(device)).squeeze(0).detach().cpu()
-        #print(reconstructed_image.shape)
-        reconstructed_image = np.array(reconstructed_image.detach())
+    reconstructed_image = vae.decode(torch.Tensor(real_settings).to(device)).squeeze(0).detach().cpu()
+    #print(reconstructed_image.shape)
+    reconstructed_image = np.array(reconstructed_image.detach())
 
-        reconstructed_image = np.swapaxes(reconstructed_image, 0, 2)
+    reconstructed_image = np.swapaxes(reconstructed_image, 0, 2)
 
         #plt.imshow(reconstructed_image)
     return reconstructed_image
