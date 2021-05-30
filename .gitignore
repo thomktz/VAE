@@ -14,3 +14,4 @@ models/
 results_gen/
 results_rec/
 models/number_0/checkpoint.pth
+fit_images/*

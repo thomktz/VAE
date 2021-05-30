@@ -13,6 +13,7 @@ import face_recognition
 import matplotlib
 # %%
 image_size = 128
+intermediate_size = 512
 SAVE_PATH = "D:\\Github\\Data\\new_treated\\"
 PATH = "D:\\Github\\Data\\new_images\\"
 
@@ -45,17 +46,17 @@ class Facealigner():
             dX = right_eye[0] - left_eye[0]
             angle = np.degrees(np.arctan2(dY, dX))
             dist = np.sqrt(dX**2 + dY**2)
-            desired_dist = image_size * self.dfw
+            desired_dist = intermediate_size * self.dfw
             scale = desired_dist/dist
             rotation_point = ((left_eye[0]+right_eye[0])//2, (left_eye[1]+ right_eye[1])//2)
             M = cv2.getRotationMatrix2D(rotation_point, angle, scale)
-            tX = image_size/2 - rotation_point[0]
-            tY = image_size * self.dle[1] - rotation_point[1]
+            tX = intermediate_size/2 - rotation_point[0]
+            tY = intermediate_size * self.dle[1] - rotation_point[1]
             M[0, 2] += tX
             M[1, 2] += tY
-            output = cv2.warpAffine(image, M, (image_size, image_size), flags= cv2.INTER_LANCZOS4)
+            output = cv2.warpAffine(image, M, (intermediate_size, intermediate_size))
             #print(output.shape)
-            return output
+            return cv2.resize(output, (128,128))
 # %%
 def align_and_show(image_path):
     f = Facealigner()
@@ -66,9 +67,10 @@ def align_and_show(image_path):
 
 def save(image_path, name):
     f = Facealigner()
-    img = f.align(image_path)
+    img = f.align(PATH + image_path)
     print(img.shape)
     matplotlib.image.imsave(SAVE_PATH + name + ".png", img)
+
 
     
 """
@@ -84,11 +86,10 @@ for p in paths:
 def treat_all_images():
     fa = Facealigner()
     total_nb_of_images = 0
-    for i in range(7):
-        paths = glob.glob(PATH +f"CAT_0{i}\\" "*.jpg")
-        for path in tqdm.tqdm(paths):
-            out = fa.align(path)
-            matplotlib.image.imsave(PATH + "treated\\" + str(total_nb_of_images) + ".png", out)
-            total_nb_of_images +=1
-        print("Folder number ", i, "...")
-    print("Images treated: ", total_nb_of_images)
+    paths = glob.glob(PATH+"*")
+    for path in tqdm.tqdm(paths):
+        out = fa.align(path)
+        matplotlib.image.imsave(SAVE_PATH  + str(total_nb_of_images) + ".png", out)
+        total_nb_of_images +=1
+
+# %%
