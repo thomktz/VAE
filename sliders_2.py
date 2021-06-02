@@ -24,16 +24,16 @@ eigenvalues, eigenvectors, eigenvectorInverses, mean, vae = load_all(1)
 
 
 width, height = 900, 700
-nb_sliders = 60
+nb_sliders = 20
 update_time = 1/25
-slider_height = 10
+slider_height = 20
 NEW_IMAGES_PATH = "D:\\Github\\Data\\new_treated\\"
 latent_space = 512
 window = tk.Tk()
 functions = [lambda x : slider_moves(x,u) for u in range(nb_sliders)]
 window.geometry(f"{width}x{height}")
 scales = []
-ranges = [[-5, 5] for i in range(nb_sliders)]
+ranges = [[-3, 3] for i in range(nb_sliders)]
 last_update = 0
 
 def calculate_image(settings):

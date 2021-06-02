@@ -31,8 +31,13 @@ def create_mean(model_number):
 def make_pca(model_number):
     pca = PCA(n_components=512)
     path = f"D:\\Github\\misc\\VAE\\models\\number_{model_number}\\"
-    pca.fit(np.load(path +"to_pca.npy"))
+    np.load(path +"to_pca.npy")
+    mean = np.load(path + "mean.npy")
+    to_pca = np.load(path +"to_pca.npy")
+    mean_matrix = np.array([mean for i in range(to_pca.shape[0])])
+    pca.fit(to_pca - mean_matrix)
     values = np.sqrt(pca.explained_variance_)
     vectors = pca.components_
     np.save(path + "eigenvalues.npy",values)
     np.save(path + "eigenvectors.npy",vectors)
+# %%
