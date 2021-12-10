@@ -16,11 +16,8 @@ Deconvolutional `decoder`
 
 ### PCA
 
-Principal Components Analysis is done on the `(#images, latent_space)` sized matrix which contains all 70000 encoded images as `512` sized vectors. Once sorted, the slider `i` has the following effect :
-
-```python
-out += slider[i] + eigenvalues[i] + eigenvectorsInverse[i]
-```
+Principal Components Analysis is done on the `(#images, latent_space)` sized matrix which contains all 70000 encoded images as `512` sized vectors. 
+  
 
 ### Results
 
