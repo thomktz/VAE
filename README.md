@@ -1,3 +1,7 @@
+## Disclaimer
+
+I intend on making a better version of this later on. The code here is really messy and should only be regarded as a proof on concept
+
 # VAE
 Variable Autoencoder with PCA, a GUI and sliders to generate faces.
 
