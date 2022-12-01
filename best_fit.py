@@ -52,9 +52,3 @@ def fit(image_name, iter, previous = None):
         loss.backward()
         optimizer.step()
     return latent
-
-        
-        
-
-
-# %%
