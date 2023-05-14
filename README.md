@@ -27,7 +27,7 @@ Principal Components Analysis is done on the `(#images, latent_space)` sized mat
 
 A screenshot of the GUI, with sliders, `Reset` and `Random` buttons:
 
-![](https://github.com/thomktz/VAE/blob/main/sliders_reset.PNG)
+![](https://github.com/thomktz/VAE/blob/main/results/sliders_reset.PNG)
 
 This is the `mean` face, i.e. average face. It is set as a zero for all sliders.
 
@@ -36,7 +36,7 @@ This is the `mean` face, i.e. average face. It is set as a zero for all sliders.
 
 A random generated face :
 
-![](https://github.com/thomktz/VAE/blob/main/sliders_random.PNG)
+![](https://github.com/thomktz/VAE/blob/main/results/sliders_random.PNG)
 
 
 
